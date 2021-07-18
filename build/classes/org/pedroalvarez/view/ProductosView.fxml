@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pedroalvarez.controller.ProductosController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/textura.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="600.0" fitWidth="600.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Blanco.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="250.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/girs.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="250.0" layoutX="202.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/girs.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="250.0" layoutX="404.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/girs.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="73.0" layoutY="101.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/girs2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="73.0" layoutY="247.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/girs2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="73.0" layoutY="393.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/girs2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="73.0" layoutY="539.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/girs2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="220.0" layoutY="24.0" text="Productos" textFill="#1165ed">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpProductos" layoutX="167.0" layoutY="119.0" prefHeight="153.0" prefWidth="348.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Codigo Producto" textFill="#1165ed">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Nombre Producto" textFill="#1165ed" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Cantidad" textFill="#1165ed" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoProducto" editable="false" prefHeight="30.0" prefWidth="115.0" GridPane.columnIndex="1">
+               <effect>
+                  <DropShadow color="#9b9b9b" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtNombreProducto" editable="false" prefHeight="30.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow color="#9b9b9b" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCantidad" editable="false" prefHeight="30.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow color="#9b9b9b" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblProductos" layoutX="167.0" layoutY="288.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="211.0" prefWidth="348.0">
+         <columns>
+            <TableColumn fx:id="colCodigoProducto" prefWidth="106.0" text="Codigo Producto" />
+            <TableColumn fx:id="colNombreProducto" prefWidth="149.0" text="Nombre Producto" />
+            <TableColumn fx:id="colCantidad" prefWidth="92.0" text="Cantidad" />
+         </columns>
+         <effect>
+            <DropShadow color="#9b9b9b" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnReporte" layoutX="430.0" layoutY="521.0" mnemonicParsing="false" onAction="#reporte" prefHeight="37.0" prefWidth="80.0" text="Reporte" textFill="#1165ed">
+         <effect>
+            <DropShadow color="#9b9b9b" />
+         </effect>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="250.0" layoutY="521.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="37.0" prefWidth="73.0" text="Eliminar" textFill="#1165ed">
+         <effect>
+            <DropShadow color="#9b9b9b" />
+         </effect>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="341.0" layoutY="521.0" mnemonicParsing="false" onAction="#editar" prefHeight="37.0" prefWidth="73.0" text="Editar" textFill="#1165ed">
+         <effect>
+            <DropShadow color="#9b9b9b" />
+         </effect>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="162.0" layoutY="521.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="37.0" prefWidth="73.0" text="Nuevo" textFill="#1165ed">
+         <effect>
+            <DropShadow color="#9b9b9b" />
+         </effect>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="70.0" fitWidth="75.0" layoutX="521.0" layoutY="7.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Casa.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

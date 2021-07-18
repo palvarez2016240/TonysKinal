@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pedroalvarez.controller.DatosProgramadorController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="541.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/textura.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="400.0" fitWidth="541.0" layoutX="2.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Blanco.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="104.0" fitWidth="202.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/girs.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="200.0" layoutX="202.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/girs.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="76.0" layoutY="22.0" text="Datos Personales" textFill="#1165ed">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="62.0" fitWidth="58.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Casa.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="128.0" layoutY="152.0" text="Pedro Luis" textFill="#1165ed">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="206.0" text="Alvarez Gonzalez" textFill="#1165ed">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="260.0" text="2016240" textFill="#1165ed">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="309.0" text="IN5AV" textFill="#1165ed">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

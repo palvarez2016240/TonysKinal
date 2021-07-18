@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteServicios" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="196e8887-b580-4764-8083-632d16464468">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="187"/>
+	<parameter name="codServicio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\elwic\\Documents\\NetBeansProjects\\TonysKinal2016240\\src\\org\\pedroalvarez\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ReporteServicio($P{codServicio})]]>
+	</queryString>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="137" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="752" height="1" forecolor="#CCCCCC" uuid="5047a613-ec29-4964-829d-b648b8b48159"/>
+				<graphicElement>
+					<pen lineWidth="10.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Transparent" x="330" y="98" width="106" height="39" forecolor="#333333" backcolor="#FFFFFF" uuid="4f99dbd6-298c-4fd5-be49-5024d4207398"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="19"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+			<image>
+				<reportElement x="347" y="25" width="89" height="73" uuid="b921c8be-bfde-40dc-84f6-1321b2b1ee30"/>
+				<imageExpression><![CDATA["C:\\Users\\elwic\\Documents\\NetBeansProjects\\TonysKinal2016240\\src\\org\\pedroalvarez\\images\\Logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="221" y="6" width="433" height="52" forecolor="#1165ED" backcolor="#FFFFFF" uuid="1044f188-bc98-4e9f-b72f-933b413619dd"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="36"/>
+				</textElement>
+				<text><![CDATA[Reporte de Servicios]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="51" y="13" width="148" height="20" uuid="465bf4c7-69b2-4042-a44e-b23853322c6b"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Tipo del Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="53" width="148" height="20" uuid="771cc6df-7580-4974-8457-f6558810d7bc"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Lugar del Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="13" width="148" height="20" uuid="20eededb-4695-4462-8cca-891deaf14c5a"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Fecha del Servicio]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="199" y="13" width="148" height="20" uuid="23857b45-4ae7-4d10-a216-2da6a7f4a6a7"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="53" width="148" height="20" uuid="6b313799-bcd7-45eb-88ff-8d1d26b2816b"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="540" y="13" width="148" height="20" uuid="1a251ba2-759b-40ca-95ed-92d8e43f66b4"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="117" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="752" height="1" forecolor="#1165ED" uuid="2d3922b2-94c3-4c46-87ab-bb696eb73c01"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="543" y="21" width="148" height="20" uuid="63f348d8-0c02-4d08-b35f-929cb7b63257"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Nombre del Producto]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="546" y="59" width="145" height="20" uuid="0d844c1b-4f93-47c1-8239-db7c1dbbe06a"/>
+				<textElement textAlignment="Center">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="469" y="1" width="283" height="116" uuid="19403c1e-f19b-49fe-bf04-fd80abfca446"/>
+				<subreportParameter name="codServicio">
+					<subreportParameterExpression><![CDATA[$P{codServicio}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReporteServicios.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="74" y="21" width="147" height="20" uuid="2911b2b0-094f-46d8-874c-156ba7c823be"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Cantidad de Platos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="21" width="148" height="20" uuid="1a21d923-3c7c-43a5-9eb7-9b8d2e4ce0f5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Tipo de Plato]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="303" y="59" width="148" height="20" uuid="390f201a-3f02-4e38-a4c2-cb451e88afcf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcionTipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="59" width="147" height="20" uuid="6589bdcc-80ab-4686-9cf2-722d594fc16b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="95">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="94" uuid="f831fa13-cfeb-4464-b754-4a13dd0c9e51"/>
+				<imageExpression><![CDATA["C:\\Users\\elwic\\Documents\\NetBeansProjects\\TonysKinal2016240\\src\\org\\pedroalvarez\\images\\Membretado 2.2.png"]]></imageExpression>
+			</image>
+		</band>
+	</lastPageFooter>
+</jasperReport>
